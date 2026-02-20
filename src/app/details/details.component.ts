@@ -9,7 +9,20 @@ import { HousingLocation } from '../housing-location';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <p> Detail  Works  {{housingLocation?.id}}</p>
+    <article>
+      <img class="listing-photo" [src]="housingLocation?.photo">
+      <section class="decor"> 
+        <h2 class="listing-location"> </h2>
+        <p class="details">{{housingLocation?.city}}, {{housingLocation?.state}}
+      </section>
+      <section class="listing-feature">
+        <h2 class="heasing">About this housing location</h2>
+        <ul>
+          <li>Units Available: {{housingLocation?.availableUnits}}</li>
+          <li>Doesthis location have wifi : {{housingLocation?.wifi}}</li>
+        </ul>  
+      </section>  
+    </article>
   `,
   styleUrls: ['./details.component.css']
 })
