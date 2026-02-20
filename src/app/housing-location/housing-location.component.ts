@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
       <a routerLink="details/{{housingLocation.id}}">Learn More</a>
     </section>
   `,
-  styleUrls: ['./hous ing-location.component.css']
+  styleUrls: ['./housing-location.component.css']
 })
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;
